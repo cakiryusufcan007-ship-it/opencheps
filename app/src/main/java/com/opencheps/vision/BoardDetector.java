@@ -91,7 +91,7 @@ public class BoardDetector {
 
         int left = Math.round(refined.x / scale) - 5;
         int top = Math.round(refined.y / scale) - Math.round((refined.side / scale) / 8f);
-        int side = Math.round(refined.side / scale) - Math.round((refined.side / scale) / 8f) + 6;
+        int side = Math.round(refined.side / scale) + 12;
         return new Board(left, top, side, refined.score);
     }
 
