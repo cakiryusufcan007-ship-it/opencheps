@@ -89,9 +89,9 @@ public class BoardDetector {
 
         if (refined.score < ACCEPT_THRESHOLD) return null;
 
-        int left = Math.round(refined.x / scale) - 3;
-        int top = Math.round(refined.y / scale);
-        int side = Math.round(refined.side / scale) + 6;
+        int left = Math.round(refined.x / scale) - 5;
+        int top = Math.round(refined.y / scale) - Math.round((refined.side / scale) / 8f);
+        int side = Math.round(refined.side / scale) - Math.round((refined.side / scale) / 8f) + 6;
         return new Board(left, top, side, refined.score);
     }
 
